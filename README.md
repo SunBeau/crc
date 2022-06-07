@@ -23,6 +23,14 @@ go get github.com/augustoroman/crc
 ## Usage
 
 ```bash
+Usage: ./main [-mode=<MODE>] [file [file ...] | -dir=<DIR>]
+  -dir string
+    	Dir to use.
+  -mode string
+    	CRC method to use.  Valid values are 'crc32' (IEEE), 'crc64-iso', and 'crc64-ecma' (default "crc64-ecma")
+```
+
+```bash
 # Compute the default hash (crc64 w/ ECMA polynomial) of one or more files.
 crc <file> [<file> ...]
 # Compute the crc64 hash with ISO polynomial.
